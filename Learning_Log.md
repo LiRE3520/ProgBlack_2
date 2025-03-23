@@ -8,3 +8,6 @@ Firstly, I decided to contribute to the decomposition map. On the back end of th
 
 ### Contribution to the Ideas Board
 The ideas board was already filled with good ideas involving front and back end design. However, I noticed missing features involving bar crawl routes. I thought a good idea was to be able to save favourite bar crawl routes to a favourites page, assuming we will use accounts for individual users. Or, similarly, a user could export a bar crawl route as text, or a picture.
+
+## Week 2
+
