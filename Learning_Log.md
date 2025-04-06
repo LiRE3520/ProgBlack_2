@@ -24,3 +24,7 @@ Using the docs, I was able to use TailwindCSS to add some custome styles to the 
 
 ### Finishing the full test project
 I finished off the test project by adding some dynamic functionality to the button by using React's 'useState'. When the button is clicked, the text changes on the button. Also, I learnt about the ability TailwindCSS has to change formatting depending on the screen size, which I used to reduce the font size of the header and paragraph when the screen size is small.
+
+## Week 2
+### Cleaning up the Git repo
+After my first git clone, I realised node_modules for the frontend and backend was stored on the repo.
