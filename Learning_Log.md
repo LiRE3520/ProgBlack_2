@@ -25,6 +25,12 @@ Using the docs, I was able to use TailwindCSS to add some custome styles to the 
 ### Finishing the full test project
 I finished off the test project by adding some dynamic functionality to the button by using React's 'useState'. When the button is clicked, the text changes on the button. Also, I learnt about the ability TailwindCSS has to change formatting depending on the screen size, which I used to reduce the font size of the header and paragraph when the screen size is small.
 
-## Week 2
+## Week 3
 ### Cleaning up the Git repo
-After my first git clone, I realised node_modules for the frontend and backend was stored on the repo.
+After my first git clone, I noticed node_modules for both frontend and backend were in the repo - likely because .gitignore was added after the folders were created. I fixed it by deleting node_modules, committing the removal, then adding the correct paths to .gitignore, after I noticed the frontend node_modules folder was missing, and committing that.
+
+### Learning and using Leaflet
+Before using Leaflet, I spent some time researching how it works, particularly with React, since we chose it as a free alternative to Google Maps. The map container and markers were already set up by someone else. Through my research, I discovered Leaflet’s popup feature, which I then used to display the name and details of each pub when its marker is clicked.
+
+### Adding a navbar
+I have used Bootstrap and navbars before, so creating a navbar and adding CSS was tedious, but simple. However, I struggled when it came to making the navbar buttons functional, where I wanted each button to link to a part of the page. This was not as simple as using the DOM and plain HTML. I had to learn how to create activeSection as a state, then pass setActiveSection as a prop down to the navbar from the app.js file. I also had to send activeSection as a prop to the top layout page, where I had to learn and use conditionality to decide which section to show.
