@@ -34,3 +34,16 @@ Before using Leaflet, I spent some time researching how it works, particularly w
 
 ### Adding a navbar
 I have used Bootstrap and navbars before, so creating a navbar and adding CSS was tedious, but simple. However, I struggled when it came to making the navbar buttons functional, where I wanted each button to link to a part of the page. This was not as simple as using the DOM and plain HTML. I had to learn how to create activeSection as a state, then pass setActiveSection as a prop down to the navbar from the app.js file. I also had to send activeSection as a prop to the top layout page, where I had to learn and use conditionality to decide which section to show.
+
+## Week 4
+### Making "View on Map" Functional
+I set out to add functionality the "View on Map" buttons on the pubs list so that clicking one would navigate to the pub map with its popup already open. My first approach was to create a custom open-popup component that recieved the selected pub's ID, and manually created a popup if there was a selected ID. However, this led to "cannot update state during rendering" errors, since I was calling a setState during the render.
+
+### Debugging with useEffect
+To get around the error, I changed the logic to use a useEffect, that watched for changes in the selected pub ID. I'd never used useEffect before, but I was hoping that once the ID was set, the effect would trigger and open the popup. But when I tried it, the popup wouldn't consistently open and sometimes I'd land on the map with no marker highlighted, or the popup would only flash briefly.
+
+### Switching Leaflet’s Event Handlers
+I decided to do some more research into the Leaflet docs, I discovered the openPopup method and the ability to attach event listeners directly to markers at render time. I switched strategies, where in the map's setup routine, when looping through the pubs, two event handlers are added on the chosen pub. One to add the popup, and one to clear the value of the chosen pub.
+
+### Reflection and State Management Practice
+I also used this process as an opportunity to reinforce my knowledge of React's useState and passing down props. I had to use another useState to store the value of the selected pub from the pubs list, and this had to be passed up and then down to the map page. While concept was already somewhat familiar now, I had to get my head around the syntax, especially for passing down both the variable and the updater function together.
